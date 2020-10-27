@@ -24,6 +24,7 @@ class PageflowService extends TService {
 
         // TODO 计算分母
         // 将数据进行过滤后再进行统计
+
         val filterRDD = actionRDD.filter(
             action => {
                 flowIds.init.contains(action.page_id.toInt)
