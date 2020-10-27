@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gmall-mock" />
+        <module name="my-java" />
+        <module name="spark-scala" />
+        <module name="gmall-common" />
+        <module name="my-scala" />
+        <module name="dw-chart" />
+        <module name="gmall-realtime" />
+        <module name="gmall-publisher" />
+        <module name="gmall-logger" />
+        <module name="summer-framework" />
+        <module name="gmall-canal" />
+        <module name="flink-java-1.10" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="flink-java-1.10.0" target="1.8" />
+      <module name="my-flink" target="1.8" />
+      <module name="spark-2.4.5" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

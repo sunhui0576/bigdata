@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cvcxy</groupId>
+    <artifactId>bigdata</artifactId>
+<!--    多模块结构，父模块必须为 ‘pom’ 打包类型-->
+    <packaging>pom</packaging>
+    <version>0.1</version>
+    <modules>
+        <module>my-flink</module>
+        <module>my-spark</module>
+        <module>my-scala</module>
+        <module>my-java</module>
+    </modules>
+
+
+</project>
