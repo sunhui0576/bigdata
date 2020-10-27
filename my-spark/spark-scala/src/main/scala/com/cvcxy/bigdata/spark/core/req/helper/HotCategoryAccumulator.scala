@@ -10,7 +10,7 @@ import scala.collection.mutable
   * 1. 继承AccumulatorV2，定义泛型【In, Out】
   *    IN : (品类，行为类型)
   *    OUT : Map[品类，HotCategory]
-  * 2. 重写方法(6)
+  * 2. 重写6个方法，计算：add,merge,value 序列化：iszero,add,reset
   */
 class HotCategoryAccumulator extends AccumulatorV2[ (String, String),mutable.Map[String, HotCategory]]{
 

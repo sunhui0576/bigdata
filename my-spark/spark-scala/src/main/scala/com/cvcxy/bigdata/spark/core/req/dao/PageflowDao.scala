@@ -3,7 +3,7 @@ package com.cvcxy.bigdata.spark.core.req.dao
 import com.cvcxy.bigdata.spark.core.req.bean.UserVisitAction
 import com.cvcxy.summer.framework.core.TDao
 import org.apache.spark.rdd.RDD
-
+//读取数据并转为对象返回
 class PageflowDao extends TDao{
     def getUserVisitAction( path:String ) = {
         val rdd: RDD[String] = readFile(path)

@@ -12,7 +12,7 @@ object Spark_Accumulator_And_Broadcast {
 
         val sparkConf = new SparkConf().setMaster("local[*]").setAppName("acc")
         val sc = new SparkContext(sparkConf)
-        // TODO 累加器 ： 分布式共享executor只写变量,driver端可读
+        // TODO 累加器 ： 分布式共享只写变量，executor之间不能相互访问，即不可读
         // 2. 累加器在executor端只增加数据，不做数据的计算，因为累加器的值不可读
         // 3. 计算完毕后，executor会将累加器的计算结果返回到driver端。
         // 4. driver端获取到多个累加器的结果，然后两两合并。最后得到累加器的执行结果。
@@ -37,7 +37,7 @@ object Spark_Accumulator_And_Broadcast {
         rdd1.flatMap(_.split(" ")).foreach{ word => {acc.add(word)}}
         // 4. 获取累加器的值
         println(acc.value)
-      // TODO 广播变量：分布式共享executor端只读变量
+      // TODO 广播变量：分布式共享变量
       // 两个数据集join，将小表加载到内存
       // 使用普通变量，会使得每个task都存储一份数据，数据冗余
       // 声明广播变量，executor存一份，每个task都可以访问到

@@ -8,17 +8,12 @@ import org.apache.spark.rdd.RDD
 class PageflowService extends TService {
 
     private val pageflowDao = new PageflowDao
-
     /**
-      * 数据分析
-      *
+      * 页面单挑转化率
       * @return
       */
     override def analysis() = {
 
-        // TODO 对指定的页面流程进行页面单跳转换率的统计
-        // 1，2，3，4，5，6，7
-        // 1-2，2-3，3-4，4-5，5-6，6-7/
         val flowIds = List(1,2,3,4,5,6,7)
         val okFlowIds = flowIds.zip(flowIds.tail).map( t => (t._1 + "-" + t._2) )
 
