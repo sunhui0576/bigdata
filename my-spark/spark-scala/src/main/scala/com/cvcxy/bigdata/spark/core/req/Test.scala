@@ -7,6 +7,9 @@ import com.cvcxy.bigdata.spark.core.req.bean.UserVisitAction
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
+/**
+ * 需求四：页面平均停留时间
+ */
 object Test {
     def main(args: Array[String]): Unit = {
 
