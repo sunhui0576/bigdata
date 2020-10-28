@@ -5,7 +5,6 @@ import org.apache.spark.sql.expressions.{MutableAggregationBuffer, UserDefinedAg
 import org.apache.spark.sql.{Row, SparkSession}
 import org.apache.spark.sql.types.{DataType, LongType, MapType, StringType, StructField, StructType}
 
-
 object SparkSQL14_Req {
 
     def main(args: Array[String]): Unit = {
